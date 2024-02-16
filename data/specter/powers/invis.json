@@ -1,0 +1,8 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "invis": {
+        "type": "origins:model_color",
+        "alpha": 0.7
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "name": "Flight",
+	"description": "You have wings, but can only fly when wearing leather armor or less.",
+    "type": "origins:multiple",
+    "hidden": false,
+    "wings": {
+        "type": "origins:elytra_flight",
+        "render_elytra": true,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:armor_value",
+                                "comparison": "<=",
+                                "compare_to": 2
+                            },
+                            {
+                                "type": "origins:empty"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "chest",
+                    "item_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:armor_value",
+                                "comparison": "<=",
+                                "compare_to": 3
+                            },
+                            {
+                                "type": "origins:empty"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "legs",
+                    "item_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:armor_value",
+                                "comparison": "<=",
+                                "compare_to": 2
+                            },
+                            {
+                                "type": "origins:empty"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "feet",
+                    "item_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:armor_value",
+                                "comparison": "<=",
+                                "compare_to": 1
+                            },
+                            {
+                                "type": "origins:empty"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

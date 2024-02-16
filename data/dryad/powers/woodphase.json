@@ -1,0 +1,40 @@
+{
+    "name": "One with Trees",
+	"description": "You can effortlesly pass through all natural wood.",
+    "type": "origins:multiple",
+    "hidden": false,
+    "phase": {
+        "type": "origins:phasing",
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_tag",
+                    "tag": "apoli:material/wood"
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "apoli:material/leaves"
+                }
+            ]
+        },
+        "render_type": "remove_blocks",
+        "view_distance": 100,
+        "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        }
+    },
+    "invis": {
+        "type": "origins:model_color",
+        "alpha": 0.2,
+        "hidden": true
+    }
+}

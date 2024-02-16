@@ -1,0 +1,14 @@
+{
+    "powers": [
+        "specter:phase",
+        "specter:vision",
+        "specter:resistances",
+        "specter:sun",
+        "specter:invis"
+    ],
+    "icon": "minecraft:ghast_tear",
+    "order": 10,
+    "impact": 3,
+    "name": "Specter",
+    "description": "The spirit of humanoids cursed to remain on the mortal plane."
+}

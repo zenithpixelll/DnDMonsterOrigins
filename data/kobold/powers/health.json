@@ -1,0 +1,15 @@
+{
+    "name": "Frail",
+	"description": "You have less health.",
+    "type": "origins:multiple",
+    "hidden": false,
+    "less": {
+        "type": "origins:attribute",
+        "modifier": {
+            "name": "Max health increase",
+            "attribute": "minecraft:generic.max_health",
+            "value": -4,
+            "operation": "addition"
+        }
+    }
+}

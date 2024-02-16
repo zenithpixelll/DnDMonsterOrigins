@@ -1,0 +1,13 @@
+{
+    "name": "Extra Planar Self",
+    "description": "Suffocation damage from blocks does not effect you.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "inWall"
+    },
+    "modifier": {
+        "operation": "multiply_base_multiplicative",
+        "value": -1
+    }
+}

@@ -1,0 +1,196 @@
+{
+    "name": "Treasure Hunter",
+	"description": "You have a small chance to find gems while moving through stone.",
+    "type": "origins:multiple",
+    "hidden": false,
+    "overworld": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "xorn:stoneandore"
+                    }
+                },
+                {
+                    "type": "origins:swimming"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:chance",
+                "chance": 0.1,
+                "action": {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:coal",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 20
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:flint",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:iron_nugget",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 20
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:gold_nugget",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 20
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:raw_iron",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:raw_copper",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:raw_gold",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:lapis_lazuli",
+                                    "amount": 3
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:redstone",
+                                    "amount": 3
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:glowstone_dust",
+                                    "amount": 3
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:quartz",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:amethyst_shard",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:emerald",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:diamond",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 10
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:echo_shard",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 5
+                        },
+                        {
+                            "element": {
+                                "type": "origins:give",
+                                "stack": {
+                                    "item": "minecraft:netherite_scrap",
+                                    "amount": 1
+                                }
+                            },
+                            "weight": 5
+                        }
+                    ]
+                }
+            }
+
+            
+        }
+    }

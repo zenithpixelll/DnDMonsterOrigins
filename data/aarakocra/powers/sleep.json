@@ -1,0 +1,11 @@
+{
+    "name": "Peak Aeries",
+    "description": "You can only sleep when you are more than 125 blocks in the up.",
+    "type": "origins:prevent_sleep",
+    "block_condition": {
+        "type": "origins:height",
+        "comparison": ">=",
+        "compare_to": 125,
+        "inverted": true
+    }
+}

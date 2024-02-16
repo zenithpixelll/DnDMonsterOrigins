@@ -1,0 +1,30 @@
+{
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": true,
+    "entity_action_lost": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "scale reset"
+            }
+        ]
+        
+    },
+    "entity_action_added": {
+        "type": "origins:and",
+    "actions": [
+        {
+            "type": "origins:execute_command",
+            "command": "scale set 2.4"
+        },
+        {
+            "type": "origins:execute_command",
+            "command": "scale set pehkui:attack_speed 0.25"
+    
+        }
+    ]
+},
+"name": "Giant",
+"description": "You are 5 blocks tall, and have a longer melee cooldown."
+}

@@ -1,0 +1,51 @@
+{
+    "type": "origins:multiple",
+    "name": "Aquatic Being",
+    "description": "You have grown in the ocean; you are suited to live in it. Your lungs do very well with water, and you can swim fast and sink very slowly. Additionally, you have a very clear vision inside water.",
+    "effects": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 10,
+        "duration_per_stack": 20,
+        "effects": [
+            {
+                "effect": "minecraft:water_breathing",
+                "amplifier": 0,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "minecraft:night_vision",
+                "amplifier": 0,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "minecraft:slow_falling",
+                "amplifier": 1,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            }
+            
+        ],
+        "condition": {
+            "type": "origins:submerged_in",
+            "fluid": "minecraft:water"
+        }
+    },
+    "swim": {
+        "type": "origins:modify_swim_speed",
+        "modifier": {
+            "operation": "addition",
+            "value": 0.2
+        }
+    },
+    "ocean": {
+        "type": "origins:modify_player_spawn",
+        "dimension": "minecraft:overworld",
+        "biome": "minecaft:ocean"
+    }
+}

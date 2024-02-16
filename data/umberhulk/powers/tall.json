@@ -1,0 +1,29 @@
+{
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": true,
+    "entity_action_lost": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "scale reset"
+            }
+        ]
+        
+    },
+    "entity_action_added": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 1.5"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:width 2"
+            }
+        ]
+    },
+"name": "Large",
+"description": "You are 3 blocks tall and 2 blocks wide."
+}

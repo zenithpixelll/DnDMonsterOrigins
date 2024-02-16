@@ -1,0 +1,15 @@
+{
+    "powers": [
+        "merrow:swim",
+        "merrow:health",
+        "merrow:armor",
+        "merrow:slow",
+        "merrow:blind",
+        "origins:aqua_affinity"
+    ],
+    "icon": "minecraft:nautilus_shell",
+    "order": 10,
+    "impact": 3,
+    "name": "Merrow",
+    "description": "Merfolk transformed by the power of the Demogorgon."
+}

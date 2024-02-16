@@ -1,0 +1,36 @@
+{
+    "name": "Step among the Bark",
+	"description": "You can teleport to any tree you are looking at.",
+    "type": "origins:multiple",
+    "hidden": false,
+    "freeze": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 200,
+            "command_at_hit": "tp @s ~ ~ ~"
+        },
+        "condition": {
+            "type": "origins:raycast",
+            "distance": 200,
+            "block": true,
+            "block_condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:in_tag",
+                        "tag": "apoli:material/wood"
+                    },
+                    {
+                        "type": "origins:in_tag",
+                        "tag": "apoli:material/leaves"
+                    }
+                ]
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "powers": [
+        "invisiblestalker:invis",
+        "invisiblestalker:fly",
+        "invisiblestalker:resistances",
+        "invisiblestalker:armor",
+        "invisiblestalker:interaction",
+        "invisiblestalker:heal"
+    ],
+    "icon": "minecraft:glass",
+    "order": 10,
+    "impact": 3,
+    "name": "Invisible Stalker",
+    "description": "An air elemental, bound to the Material plane by powerful magic. Created to kill."
+}

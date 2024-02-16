@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:armor_stand,tag=tphomestand] at @s run particle minecraft:happy_villager ~ ~1 ~ 0.3 0.3 0.3 0.5 20 normal

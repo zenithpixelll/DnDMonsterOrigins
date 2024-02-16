@@ -1,0 +1,12 @@
+{
+    "powers": [
+        "merfolk:swim",
+        "merfolk:slow",
+        "origins:aqua_affinity"
+    ],
+    "icon": "minecraft:scute",
+    "order": 10,
+    "impact": 3,
+    "name": "Merfolk",
+    "description": "Aquatic humanoids with the body of a human and the lower half of a fish."
+}

@@ -1,0 +1,13 @@
+{
+    "powers": [
+        "aarakocra:flight",
+        "aarakocra:wings",
+        "aarakocra:damage",
+        "aarakocra:sleep"
+    ],
+    "icon": "minecraft:feather",
+    "order": 10,
+    "impact": 3,
+    "name": "Aarakocra",
+    "description": "Protectors of the Elemental Plane of Air"
+}

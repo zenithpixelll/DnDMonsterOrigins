@@ -1,0 +1,12 @@
+{
+    "powers": [
+        "gnome:gems",
+        "gnome:vision",
+        "gnome:short"
+    ],
+    "icon": "minecraft:diamond",
+    "order": 10,
+    "impact": 3,
+    "name": "Deep Gnome",
+    "description": "Gem harvesters of the deep caverns."
+}

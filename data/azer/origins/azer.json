@@ -1,0 +1,15 @@
+{
+    "powers": [
+        "azer:firedamage",
+        "azer:immunities",
+        "azer:vision",
+        "azer:firewalk",
+        "azer:water",
+        "azer:enemy"
+    ],
+    "icon": "minecraft:campfire",
+    "order": 10,
+    "impact": 3,
+    "name": "Azer",
+    "description": "Metalic smiths from the Elemental Plane of Fire"
+}

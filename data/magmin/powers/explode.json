@@ -1,0 +1,27 @@
+{
+    "name": "Molten Core",
+    "description": "You Explode when you die.",
+    "type": "origins:multiple",
+    "keep": {
+        "type": "origins:keep_inventory",
+        "item_condition": {
+            "type": "origins:fireproof"
+        }
+    },
+    "explode":{
+        "type": "origins:action_on_death",
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:explode",
+                        "power": 3,
+                        "create_fire": true
+                    }
+                }
+            ]
+        }
+    }
+}

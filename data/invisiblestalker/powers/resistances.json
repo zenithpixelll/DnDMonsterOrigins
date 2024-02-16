@@ -1,0 +1,108 @@
+{
+    "name": "Of Air",
+    "description": "You have resistance to all attacks. You also do not need to eat, sleep, or breath",
+    "type": "origins:multiple",
+    "weapons":{
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.8
+        }
+    },
+    "food": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_apple"
+                    },
+                    "inverted": true
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:enchanted_golden_apple"
+                    },
+                    "inverted": true
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:chorus_fruit"
+                    },
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "heal": {
+        "type": "origins:self_action_on_kill",
+        "cooldown": 2,
+        "entity_action": {
+            "type": "origins:heal",
+            "amount": 2
+        }
+    },
+    "feed": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 1,
+                    "saturation": 0
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": "<",
+            "compare_to": 19
+        }
+    },
+    "breath": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:gain_air",
+                    "value": 20
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:in_block",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:water"
+            }
+        }
+    },
+    "sleep": {
+        "type": "origins:modify_insomnia_ticks",
+        "modifier": {
+            "operation": "set_total",
+            "value": 0
+        }
+    },
+    "fall": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:from_falling"
+        }
+    },
+    "poison": {
+        "type": "origins:effect_immunity",
+        "effect": "minecraft:poison"
+    }
+}

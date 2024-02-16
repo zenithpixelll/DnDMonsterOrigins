@@ -1,0 +1,18 @@
+{
+    "name": "Invisible",
+	"description": "You are invisible, and silent. And you cannot interact with villagers.",
+    "type": "origins:multiple",
+    "hidden": false,
+    "invis": {
+        "type": "origins:invisibility",
+        "render_armor": false
+    },
+    "silent": {
+        "type": "origins:prevent_game_event",
+        "events":[
+            "minecraft:step",
+            "minecraft:hit_ground",
+            "minecraft:swim"
+        ]
+    }
+}

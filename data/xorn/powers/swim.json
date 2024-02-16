@@ -1,0 +1,71 @@
+{
+    "name": "One with Stone",
+    "description": "When Can swim through stone",
+    "type": "origins:multiple",
+    "glow": {
+        "type": "origins:entity_glow",
+        "entity_condition": {
+            "type": "origins:on_block",
+            "block_condition": {
+                "type": "origins:movement_blocking"
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:distance",
+            "comparison": "<=",
+            "compare_to": 60
+        }
+    },
+    "phase": {
+        "type": "origins:phasing",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "xorn:stoneandore"
+        },
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:swimming"
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "xorn:stoneandore"
+                    }
+                }
+            ]
+        },
+        "blacklist": false,
+        "phase_down_condition": {
+            "type": "origins:swimming"
+        },
+        "view_distance": 20,
+        "render_type": "blindness"
+    },
+    "swim": {
+        "type": "origins:swimming",
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "xorn:stoneandore"
+                    }
+                },
+                {
+                    "type": "origins:raycast",
+                    "block": true,
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "xorn:stoneandore"
+                    },
+                    "distance": 2
+                }
+            ]
+        }
+    }
+}

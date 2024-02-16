@@ -1,0 +1,52 @@
+{
+    "name": "Pack Benefits",
+    "description": "When you are in proximity to 1 or more other kobolds, you all gain a variety of benefits",
+    "type": "origins:multiple",
+    "grant":{
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "bientity_condition": {
+                "type": "origins:both",
+                "condition": {
+                    "type": "origins:origin",
+                    "origin": "kobold:kobold",
+                    "layer": "origins:origin"
+                }
+            },
+            "bientity_action": {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:grant_power",
+                    "source": "kobold:kobold",
+                    "power": "kobold:packplus"
+                }
+            }
+        }
+    },
+    "revoke":{
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "bientity_condition": {
+                "type": "origins:both",
+                "condition": {
+                    "type": "origins:origin",
+                    "origin": "kobold:kobold",
+                    "layer": "origins:origin"
+                },
+                "inverted": true
+            },
+            "bientity_action": {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:revoke_power",
+                    "source": "kobold:kobold",
+                    "power": "kobold:packplus"
+                }
+            }
+        }
+    }
+}

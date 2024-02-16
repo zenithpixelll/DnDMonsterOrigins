@@ -1,0 +1,26 @@
+{
+    "name": "Extinguish",
+    "description": "You sink in water and are damaged by it.",
+    "type": "origins:multiple",
+    "water": {
+        "type": "origins:ignore_water"
+    },
+    "damage": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "origins:in_block",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:water"
+            }
+        },
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 1,
+            "source": {
+                "name": "freeze"
+            }
+        }
+    }
+}

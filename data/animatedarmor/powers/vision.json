@@ -1,0 +1,13 @@
+{
+    "name": "Blindsense",
+    "description": "You have nightvision but can only see in black and white.",
+    "type": "origins:multiple",
+    "vision":{
+        "type": "origins:night_vision",
+        "strength": 1
+    },
+    "shader": {
+        "type": "origins:shader",
+        "shader": "minecraft:shaders/post/pencil.json"
+    }
+}

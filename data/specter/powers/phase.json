@@ -1,0 +1,21 @@
+{
+    "name": "Incorporeal",
+    "description": "You can fly through all blocks.",
+    "type": "origins:multiple",
+    "fly": {
+        "type": "origins:creative_flight"
+    },
+    "phase": {
+        "type": "origins:phasing",
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 60,
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "phase_down_condition": {
+            "type": "origins:exists"
+        }
+    }
+}

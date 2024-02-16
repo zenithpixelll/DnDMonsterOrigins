@@ -1,0 +1,29 @@
+{
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": true,
+    "entity_action_lost": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "scale reset"
+            }
+        ]
+        
+    },
+    "entity_action_added": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 0.8"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:width 1.5"
+            }
+        ]
+    },
+"name": "Heavy Set",
+"description": "You are slightly smaller and wider."
+}

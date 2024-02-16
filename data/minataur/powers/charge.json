@@ -1,0 +1,378 @@
+{
+    "name": "Horned Charge",
+    "description": "As you sprint you gain power, and if you attack while sprinting, you will deal increased damage.",
+    "type": "origins:multiple",
+    "bar": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 1
+        }
+    },
+    "charge": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "condition": {
+            "type": "origins:sprinting"
+        },
+        "falling_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_bar",
+            "operation": "set",
+            "change": 0
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_bar",
+            "operation": "add",
+            "change": 7
+        }
+    },
+    "100": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 99
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 10,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    },
+    "90": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 90
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": "<",
+                        "compare_to": 99
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 9,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    },
+    "80": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 80
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": "<",
+                        "compare_to": 90
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 8,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    },
+    "70": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 70
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": "<",
+                        "compare_to": 80
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 7,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    },
+    "60": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 60
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": "<",
+                        "compare_to": 70
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 6,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    },
+    "50": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 50
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": "<",
+                        "compare_to": 60
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 5,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    },
+    "40": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 40
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": "<",
+                        "compare_to": 50
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 4,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    },
+    "30": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 30
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": "<",
+                        "compare_to": 40
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 3,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    },
+    "20": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 20
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": "<",
+                        "compare_to": 30
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 2,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    },
+    "10": {
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": ">=",
+                        "compare_to": 10
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bar",
+                        "comparison": "<",
+                        "compare_to": 20
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 1,
+                "source": {
+                    "name": "player"
+                }
+            }
+        }
+        
+    }
+}

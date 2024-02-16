@@ -1,0 +1,33 @@
+{
+    "name": "Sun Fright",
+	"description": "Your Body refuses to by in the sun.",
+    "type": "origins:multiple",
+    "hidden": false,
+    "sink": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                "type": "origins:daytime"
+                },
+                {
+                "type": "origins:exposed_to_sun"
+                },
+                {
+                "type": "origins:in_rain",
+                "inverted": true
+                },
+                {
+                "type": "origins:in_snow",
+                "inverted": true
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:add_velocity",
+            "y": -2
+        }
+    }
+}

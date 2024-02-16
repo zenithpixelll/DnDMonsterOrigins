@@ -1,0 +1,13 @@
+{
+    "powers": [
+        "cyclops:strength",
+        "cyclops:tall",
+        "cyclops:armor",
+        "cyclops:vision"
+    ],
+    "icon": "minecraft:leather",
+    "order": 10,
+    "impact": 3,
+    "name": "Cyclops",
+    "description": "One eyed giant from the wild lands."
+}

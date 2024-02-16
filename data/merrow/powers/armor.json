@@ -1,0 +1,10 @@
+{
+    "name": "Tough Skin",
+    "description": "You have been gifted with reinforced skin.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.armor",
+        "value": 4,
+        "operation": "addition"
+    }
+}

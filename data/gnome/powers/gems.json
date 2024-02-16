@@ -1,0 +1,63 @@
+{
+    "name": "Gem Miner",
+	"description": "You have a small chance to find gems in stone.",
+    "type": "origins:multiple",
+    "hidden": false,
+    "diamond": {
+        "type": "origins:action_on_block_break",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "apoli:material/stone"
+        },
+        "block_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:chance",
+                    "chance": 0.03,
+                    "action": {
+                        "type": "origins:chance",
+                        "chance": 0.5,
+                        "action": {
+                            "type": "origins:execute_command",
+                            "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:lapis_lazuli\",Count:1b}}"
+                        },
+                        "fail_action": {
+                            "type": "origins:chance",
+                            "chance": 0.5,
+                            "action": {
+                                "type": "origins:execute_command",
+                                "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:amethyst_shard\",Count:1b}}"
+                            },
+                            "fail_action": {
+                                "type": "origins:chance",
+                                "chance": 0.5,
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:emerald\",Count:1b}}"
+                                },
+                                "fail_action": {
+                                    "type": "origins:chance",
+                                    "chance": 0.5,
+                                    "action": {
+                                        "type": "origins:execute_command",
+                                        "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:diamond\",Count:1b}}"
+                                    },
+                                    "fail_action": {
+                                        "type": "origins:chance",
+                                        "chance": 0.1,
+                                        "action": {
+                                            "type": "origins:execute_command",
+                                            "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:netherite_scrap\",Count:1b}}"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            ]
+        }
+    }
+}

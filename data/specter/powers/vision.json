@@ -1,0 +1,9 @@
+{
+    "name": "Un-Sight",
+    "description": "You have night vision.",
+    "type": "origins:multiple",
+    "vision":{
+        "type": "origins:night_vision",
+        "strength": 1
+    }
+}

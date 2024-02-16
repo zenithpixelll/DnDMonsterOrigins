@@ -1,0 +1,1 @@
+execute as @p[tag=runtphome] run function dryad:runtp
