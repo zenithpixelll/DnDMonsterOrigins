@@ -1,1 +1,0 @@
-execute as @p[tag=clearhome] run function dryad:clearhome
