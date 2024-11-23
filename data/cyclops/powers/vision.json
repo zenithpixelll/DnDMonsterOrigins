@@ -1,9 +1,0 @@
-{
-    "name": "One Eyed",
-    "description": "You have blured vision.",
-    "type": "origins:multiple",
-    "shader": {
-        "type": "origins:shader",
-        "shader": "minecraft:shaders/post/blobs2.json"
-    }
-}
