@@ -1,8 +1,0 @@
-{
-    "name": "Heavy",
-    "description": "You cannot swim and sink in water.",
-    "type": "origins:multiple",
-    "water": {
-        "type": "origins:ignore_water"
-    }
-}
