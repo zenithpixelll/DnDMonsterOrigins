@@ -1,8 +1,0 @@
-{
-    "name": "Flame Core",
-	"description": "You are immune to fire damage.",
-    "type": "origins:multiple",
-    "fire":{
-        "type": "origins:fire_immunity"
-    }
-}
