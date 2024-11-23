@@ -1,9 +1,0 @@
-{
-    "name": "Molten Eyes",
-    "description": "You have nightvision.",
-    "type": "origins:multiple",
-    "vision":{
-        "type": "origins:night_vision",
-        "strength": 0.5
-    }
-}
